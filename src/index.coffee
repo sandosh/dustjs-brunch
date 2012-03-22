@@ -16,7 +16,7 @@ module.exports = class DustCompiler
     try
       split_path = path.split('templates/')
       if split_path.length > 1
-        file_name = split_path[split_path.length]
+        file_name = split_path[split_path.length - 1]
       else
         file_name = split_path[0]
       content = dust.compile data, file_name.replace(/\.dust/, '')
